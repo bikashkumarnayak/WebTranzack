@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Suite]]">
+  <listeners>
+    <listener class-name="com.abstech.tranzack.Listener"/>
+    <listener class-name="resource.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Department(failed)(failed)">
+    <classes>
+      <class name="com.abstech.tranzack.DepartmentPage">
+        <methods>
+          <include name="teardown"/>
+          <include name="initialize"/>
+          <include name="departmentNameValidatio"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.abstech.tranzack.DepartmentPage -->
+    </classes>
+  </test> <!-- Department(failed)(failed) -->
+  <test thread-count="5" name="Attendance(failed)(failed)">
+    <classes>
+      <class name="com.abstech.tranzack.AttendancePage">
+        <methods>
+          <include name="initialize"/>
+          <include name="login"/>
+          <include name="clkCopy"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.abstech.tranzack.AttendancePage -->
+    </classes>
+  </test> <!-- Attendance(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

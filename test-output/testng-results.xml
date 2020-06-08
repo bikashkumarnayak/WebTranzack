@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="19" passed="19">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="229586" started-at="2020-05-30T15:20:40 IST" finished-at="2020-05-30T15:24:30 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="229586" started-at="2020-05-30T15:20:40 IST" finished-at="2020-05-30T15:24:30 IST">
+      <class name="com.abstech.tranzack.DepartmentPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="initialize" is-config="true" duration-ms="7161" started-at="2020-05-30T15:20:40 IST" finished-at="2020-05-30T15:20:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="login" is-config="true" duration-ms="23286" started-at="2020-05-30T15:20:47 IST" finished-at="2020-05-30T15:21:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="clickDepartment()[pri:1, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="clickDepartment" duration-ms="36199" started-at="2020-05-30T15:21:11 IST" finished-at="2020-05-30T15:21:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickDepartment -->
+        <test-method status="PASS" signature="departmentvalidation()[pri:2, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="departmentvalidation" duration-ms="15618" started-at="2020-05-30T15:21:47 IST" finished-at="2020-05-30T15:22:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- departmentvalidation -->
+        <test-method status="PASS" signature="departmentNameValidatio()[pri:3, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="departmentNameValidatio" duration-ms="15008" started-at="2020-05-30T15:22:03 IST" finished-at="2020-05-30T15:22:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- departmentNameValidatio -->
+        <test-method status="PASS" signature="departmentHeadValidatio()[pri:4, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="departmentHeadValidatio" duration-ms="14780" started-at="2020-05-30T15:22:18 IST" finished-at="2020-05-30T15:22:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- departmentHeadValidatio -->
+        <test-method status="PASS" signature="newAddDepartment()[pri:5, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="newAddDepartment" duration-ms="5428" started-at="2020-05-30T15:22:32 IST" finished-at="2020-05-30T15:22:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newAddDepartment -->
+        <test-method status="PASS" signature="DownloadExcel()[pri:6, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="DownloadExcel" duration-ms="6691" started-at="2020-05-30T15:22:38 IST" finished-at="2020-05-30T15:22:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DownloadExcel -->
+        <test-method status="PASS" signature="DownloadCSV()[pri:7, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="DownloadCSV" duration-ms="5142" started-at="2020-05-30T15:22:45 IST" finished-at="2020-05-30T15:22:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DownloadCSV -->
+        <test-method status="PASS" signature="DownloadPDF()[pri:8, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="DownloadPDF" duration-ms="6647" started-at="2020-05-30T15:22:50 IST" finished-at="2020-05-30T15:22:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DownloadPDF -->
+        <test-method status="PASS" signature="copy()[pri:9, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="copy" duration-ms="6853" started-at="2020-05-30T15:22:56 IST" finished-at="2020-05-30T15:23:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- copy -->
+        <test-method status="PASS" signature="clkButton()[pri:10, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="clkButton" duration-ms="5142" started-at="2020-05-30T15:23:03 IST" finished-at="2020-05-30T15:23:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clkButton -->
+        <test-method status="PASS" signature="clkTenRowButton()[pri:11, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="clkTenRowButton" duration-ms="6540" started-at="2020-05-30T15:23:08 IST" finished-at="2020-05-30T15:23:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clkTenRowButton -->
+        <test-method status="PASS" signature="clkNextButton()[pri:12, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="clkNextButton" duration-ms="8461" started-at="2020-05-30T15:23:15 IST" finished-at="2020-05-30T15:23:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clkNextButton -->
+        <test-method status="PASS" signature="clkTwentyFiveRowButton()[pri:13, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="clkTwentyFiveRowButton" duration-ms="7415" started-at="2020-05-30T15:23:23 IST" finished-at="2020-05-30T15:23:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clkTwentyFiveRowButton -->
+        <test-method status="PASS" signature="clkFiftyRowButton()[pri:14, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="clkFiftyRowButton" duration-ms="5201" started-at="2020-05-30T15:23:31 IST" finished-at="2020-05-30T15:23:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clkFiftyRowButton -->
+        <test-method status="PASS" signature="clkHideButton()[pri:16, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="clkHideButton" duration-ms="8429" started-at="2020-05-30T15:23:36 IST" finished-at="2020-05-30T15:23:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clkHideButton -->
+        <test-method status="PASS" signature="clkEditButton()[pri:17, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="clkEditButton" duration-ms="11388" started-at="2020-05-30T15:23:44 IST" finished-at="2020-05-30T15:23:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clkEditButton -->
+        <test-method status="PASS" signature="clkDeleteButton()[pri:18, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="clkDeleteButton" duration-ms="7181" started-at="2020-05-30T15:23:56 IST" finished-at="2020-05-30T15:24:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clkDeleteButton -->
+        <test-method status="PASS" signature="clkSearchElement()[pri:19, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="clkSearchElement" duration-ms="17750" started-at="2020-05-30T15:24:03 IST" finished-at="2020-05-30T15:24:21 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clkSearchElement -->
+        <test-method status="PASS" signature="clkSearch()[pri:20, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="clkSearch" duration-ms="8213" started-at="2020-05-30T15:24:21 IST" finished-at="2020-05-30T15:24:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clkSearch -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.abstech.tranzack.DepartmentPage@5c671d7f]" name="teardown" is-config="true" duration-ms="990" started-at="2020-05-30T15:24:29 IST" finished-at="2020-05-30T15:24:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.abstech.tranzack.DepartmentPage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

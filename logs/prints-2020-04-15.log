@@ -1,0 +1,7 @@
+15:50:10.263 [main] INFO  com.abstech.tranzack.HomePage - navigate Login page Successfully 
+15:50:10.378 [main] INFO  com.abstech.tranzack.HomePage - successfully enter
+15:50:10.525 [main] INFO  com.abstech.tranzack.HomePage - successfully enter
+15:50:55.706 [main] INFO  com.abstech.tranzack.HomePage - login page login Successfully
+15:50:55.732 [main] INFO  com.abstech.tranzack.HomePage - move mouse 
+15:50:56.626 [main] INFO  com.abstech.tranzack.HomePage - successfully moved
+15:57:59.080 [main] INFO  com.abstech.tranzack.HomePage - initialize the browser

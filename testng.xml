@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners> 
+ 
+         <listener class-name="com.abstech.tranzack.Listener"/>
+         <listener class-name="resource.ExtentReporterNG"/>
+         
+ </listeners>
+  <test  name="Dashboard">
+    <classes>
+    <class name="com.abstech.tranzack.HomePage"/>     
+    </classes>
+  </test>
+  <test  name="login">
+    <classes>
+       <class name="com.abstech.tranzack.DashboardPage"/>
+      </classes>
+  </test>
+  <test  name="Department">
+    <classes>
+     <class name="com.abstech.tranzack.DepartmentPage"/>
+      </classes>
+  </test>
+  <test  name="Attendance">
+    <classes>
+     <class name="com.abstech.tranzack.AttendancePage"/>
+      </classes>
+  </test>
+  <test  name="Test">
+    <classes>
+     <class name="com.abstech.tranzack.AppTest"/>
+      </classes>
+  </test>
+</suite> <!-- Suite -->
