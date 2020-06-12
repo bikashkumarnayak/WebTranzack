@@ -88,35 +88,35 @@ public class AttendancePage extends Base{
 	@Test(priority=3)
 	public void clkCopy() throws InterruptedException {
 		at=new Attendance(driver);
-		at.getCoppy().click();
+		at.getCopy().click();
 		log.info("click Successfully");
 		Thread.sleep(5000);
 		
 	}
-	@Test(priority=4)
-	public void clkExcel() throws InterruptedException {
-		at=new Attendance(driver);
-		at.getExcel().click();
-		log.info("click Successfully");
-		Thread.sleep(5000);
-		
-	}
-	@Test(priority=5)
-	public void clkCSV() throws InterruptedException {
-		at=new Attendance(driver);
-		at.getCSV().click();
-		log.info("click Successfully");
-		Thread.sleep(5000);
-		
-	}
-	@Test(priority=6)
-	public void clkPDF() throws InterruptedException {
-		at=new Attendance(driver);
-		at.getPDF().click();
-		log.info("click Successfully");
-		Thread.sleep(5000);
-		
-	}
+//	@Test(priority=4)
+//	public void clkExcel() throws InterruptedException {
+//		at=new Attendance(driver);
+//		at.getExcel().click();
+//		log.info("click Successfully");
+//		Thread.sleep(5000);
+//		
+//	}
+//	@Test(priority=5)
+//	public void clkCSV() throws InterruptedException {
+//		at=new Attendance(driver);
+//		at.getCSV().click();
+//		log.info("click Successfully");
+//		Thread.sleep(5000);
+//		
+//	}
+//	@Test(priority=6)
+//	public void clkPDF() throws InterruptedException {
+//		at=new Attendance(driver);
+//		at.getPDF().click();
+//		log.info("click Successfully");
+//		Thread.sleep(5000);
+//		
+//	}
 
 	@AfterTest
 	public void teardown() {

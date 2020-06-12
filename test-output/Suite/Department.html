@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Department</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>18/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>15/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat May 30 14:57:14 IST 2020</td>
+<td>Started on:</td><td>Fri Jun 12 13:07:11 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>212 seconds (212885 ms)</td>
+<tr><td>Total time:</td><td>192 seconds (192782 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,17 +75,47 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.abstech.tranzack.DepartmentPage.departmentNameValidatio()'><b>departmentNameValidatio</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	expected [true] but found [false]
-	at com.abstech.tranzack.DepartmentPage.departmentNameValidatio(DepartmentPage.java:98)
+<td title='com.abstech.tranzack.DepartmentPage.clkNextButton()'><b>clkNextButton</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
+<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: Failed to execute &apos;elementsFromPoint&apos; on &apos;Document&apos;: The provided double value is non-finite.
+  (Session info: chrome=83.0.4103.97)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-VV0I5IH&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\abs\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:55300}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ae9049725f831f75d606674cfcaa2efb
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at PageObject.Department.getNextButton(Department.java:110)
+	at com.abstech.tranzack.DepartmentPage.clkNextButton(DepartmentPage.java:204)
 	at java.util.ArrayList.forEach(Unknown Source)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1552221437", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1552221437'><pre>java.lang.AssertionError: The following asserts failed:
-	expected [true] but found [false]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-	at com.abstech.tranzack.DepartmentPage.departmentNameValidatio(DepartmentPage.java:98)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2008746677", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2008746677'><pre>org.openqa.selenium.JavascriptException: javascript error: Failed to execute &apos;elementsFromPoint&apos; on &apos;Document&apos;: The provided double value is non-finite.
+  (Session info: chrome=83.0.4103.97)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-VV0I5IH&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\abs\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:55300}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ae9049725f831f75d606674cfcaa2efb
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at PageObject.Department.getNextButton(Department.java:110)
+	at com.abstech.tranzack.DepartmentPage.clkNextButton(DepartmentPage.java:204)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -115,8 +145,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>0</td>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -126,95 +156,80 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.abstech.tranzack.DepartmentPage.DownloadCSV()'><b>DownloadCSV</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
-<td></td>
-<td>5</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
-<tr>
-<td title='com.abstech.tranzack.DepartmentPage.DownloadExcel()'><b>DownloadExcel</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
-<td></td>
-<td>6</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
-<tr>
-<td title='com.abstech.tranzack.DepartmentPage.DownloadPDF()'><b>DownloadPDF</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
-<td></td>
-<td>5</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
-<tr>
 <td title='com.abstech.tranzack.DepartmentPage.clickDepartment()'><b>clickDepartment</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
 <td>35</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.clkButton()'><b>clkButton</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
-<td>6</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>5</td>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.clkDeleteButton()'><b>clkDeleteButton</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
 <td>7</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.clkEditButton()'><b>clkEditButton</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
 <td>11</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.clkFiftyRowButton()'><b>clkFiftyRowButton</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
-<td>7</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>6</td>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.clkHideButton()'><b>clkHideButton</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
 <td>7</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
-<tr>
-<td title='com.abstech.tranzack.DepartmentPage.clkNextButton()'><b>clkNextButton</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
-<td></td>
-<td>8</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.clkSearch()'><b>clkSearch</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
-<td>6</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>5</td>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.clkSearchElement()'><b>clkSearchElement</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
-<td>17</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>19</td>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.clkTenRowButton()'><b>clkTenRowButton</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
-<td>5</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>6</td>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.clkTwentyFiveRowButton()'><b>clkTwentyFiveRowButton</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
-<td>7</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>5</td>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.copy()'><b>copy</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
-<td>5</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>6</td>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.departmentHeadValidatio()'><b>departmentHeadValidatio</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
 <td>14</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
+<tr>
+<td title='com.abstech.tranzack.DepartmentPage.departmentNameValidatio()'><b>departmentNameValidatio</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
+<td></td>
+<td>13</td>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.departmentvalidation()'><b>departmentvalidation</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
 <td>13</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 <tr>
 <td title='com.abstech.tranzack.DepartmentPage.newAddDepartment()'><b>newAddDepartment</b><br>Test class: com.abstech.tranzack.DepartmentPage</td>
 <td></td>
-<td>8</td>
-<td>com.abstech.tranzack.DepartmentPage@5609159b</td></tr>
+<td>5</td>
+<td>com.abstech.tranzack.DepartmentPage@fa36558</td></tr>
 </table><p>
 </body>
 </html>

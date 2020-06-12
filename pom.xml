@@ -60,13 +60,11 @@
     <version>7.1.0</version>
     <scope>test</scope>
 </dependency>
- <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-<dependency>
+ <dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
-    <version>4.1.5</version>
+    <version>4.1.3</version>
 </dependency>
-
 <dependency>
     <groupId>com.relevantcodes</groupId>
     <artifactId>extentreports</artifactId>

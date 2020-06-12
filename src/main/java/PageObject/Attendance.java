@@ -10,7 +10,7 @@ public class Attendance {
    WebDriver driver;
    private By Attendance=By.xpath("//*[@id=\"menuPanel\"]/li[6]/ul/li[2]/a/span[1]");
    private By Frame = By.cssSelector("#modalBody_23 > div.modal-contents.-ui-widget-content > div > iframe");
-   private By Copy=By.xpath("//*[@id=\"attendanceTable_wrapper\"]/div[1]/button[1]/i");
+   private By Copy=By.xpath("//button[@class='dt-button buttons-copy buttons-html5']");
    private By Excel=By.xpath("//*[@id=\"attendanceTable_wrapper\"]/div[1]/button[2]/i");
    private By CSV=By.xpath("//*[@id=\"attendanceTable_wrapper\"]/div[1]/button[3]/i");
    private By PDF=By.xpath("//*[@id=\"attendanceTable_wrapper\"]/div[1]/button[4]/i");
@@ -51,7 +51,7 @@ public class Attendance {
 	   return driver.findElement(Table);
    }
    
-   public WebElement getCoppy() {
+   public WebElement getCopy() {
 	   return driver.findElement(Copy);
    }
    public WebElement getExcel() {

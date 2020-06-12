@@ -6,8 +6,8 @@
       <class name="com.abstech.tranzack.DepartmentPage">
         <methods>
           <include name="teardown"/>
+          <include name="clkNextButton"/>
           <include name="initialize"/>
-          <include name="departmentNameValidatio"/>
           <include name="login"/>
         </methods>
       </class> <!-- com.abstech.tranzack.DepartmentPage -->

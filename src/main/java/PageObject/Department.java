@@ -12,6 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Department {
 	public WebDriver driver;
+	Actions a;
 
 	private By Department = By.xpath("//*[@id=\"menuPanel\"]/li[6]/ul/li[1]/a/span[1]");
 	private By Frame = By.cssSelector("#modalBody_11 > div:nth-child(2) > div:nth-child(1) > iframe:nth-child(1)");
@@ -28,9 +29,9 @@ public class Department {
 	private By Copy=By.xpath("//*[@id=\"departmentTable_wrapper\"]/div[1]/button[2]/i");
 	private By AllButton=By.xpath("//*[@id=\"departmentTable_wrapper\"]/div[1]/button[1]");
 	private By TenButton=By.xpath("//*[@id=\"departmentTable_wrapper\"]/div[1]/button[1]");
-	private By TwentyFiveButton=By.xpath("//*[@id=\"departmentTable_wrapper\"]/div[1]/button[1]");
+	private By TwentyFiveButton=By.xpath("//button[@class='dt-button button-page-length active']");
 	private By FiftyButton=By.xpath("//*[@id=\"departmentTable_wrapper\"]/div[1]/button[1]");
-	private By next=By.xpath("//*[@id=\"departmentTable_next\"]/a");
+	private By next=By.xpath("//li[@id='departmentTable_next']");
 	private By HideButton=By.xpath("//*[@id=\"hideBtn\"]/i");
 	private By EditButton=By.xpath("//*[@id=\"editBtn\"]/i");
 	private By Update=By.className("modalBtn");
@@ -40,6 +41,7 @@ public class Department {
 	private By All=By.xpath("//*[@id=\"departmentTable_wrapper\"]/div[1]/div[2]/div/button[1]");
 	private By Searchbox=By.xpath("//*[@id=\"departmentTable_filter\"]/label/input");
 	private By SearchElement=By.xpath("//*[@id=\"departmentTable_wrapper\"]/div[3]/div[2]");
+	private By showAll_Rows=By.xpath("//button[@class='dt-button buttons-collection buttons-page-length']");
 	
 	
 	public Department(WebDriver driver) {
@@ -108,6 +110,8 @@ public class Department {
 	public void getNextButton() {
 		Actions a=new Actions(driver);
 		a.moveToElement(driver.findElement(next)).click().build().perform();
+//		return driver.findElement(next);
+		
 	}
 	public WebElement getHideButton() {
 		return driver.findElement(HideButton);
@@ -149,6 +153,12 @@ public class Department {
 		   JavascriptExecutor js = ((JavascriptExecutor)driver);
 		   js. executeScript("arguments[0].setAttribute('style', 'background: red; border: 4px solid red;');", element);   
 		 }
+	public void getchecknext() {
+		a=new Actions(driver);
+		a.moveToElement(driver.findElement(showAll_Rows)).click().build().perform();
+		a.moveToElement(driver.findElement(By.xpath("//div[@class='dt-button-collection']//button[2]"))).click().build().perform();
+		a.moveToElement(driver.findElement(By.xpath("//a[contains(text(),'Next')]"))).click().build().perform();
+	}
 	
 	}
 	
