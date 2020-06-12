@@ -175,7 +175,7 @@ public class DepartmentPage extends Base {
 		de = new Department(driver);
 		de.getTenRowButton().click();
 		log.info("Successfully click");
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 	}
 	@Test(priority = 12)
 	public void clkNextButton() throws InterruptedException {
@@ -187,7 +187,7 @@ public class DepartmentPage extends Base {
 //		Thread.sleep(5000);
 //		de.getNextButton();
 //		log.info("Successfully click next Button");
-		Thread.sleep(7000);
+		Thread.sleep(5000);
 	}
 
 
@@ -234,7 +234,6 @@ public class DepartmentPage extends Base {
 
 	}
 
-	
 	@Test(priority = 18)
 	public void clkDeleteButton() throws InterruptedException {
 		de = new Department(driver);

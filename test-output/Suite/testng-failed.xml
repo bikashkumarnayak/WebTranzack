@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+  <listeners>
+    <listener class-name="com.abstech.tranzack.Listener"/>
+    <listener class-name="resource.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Department(failed)">
     <classes>
       <class name="com.abstech.tranzack.DepartmentPage">
         <methods>
           <include name="teardown"/>
-          <include name="clkNextButton"/>
           <include name="initialize"/>
           <include name="login"/>
+          <include name="clkSearchElement"/>
+          <include name="clkDeleteButton"/>
         </methods>
       </class> <!-- com.abstech.tranzack.DepartmentPage -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Department(failed) -->
 </suite> <!-- Failed suite [Suite] -->
