@@ -2,9 +2,9 @@ package PageObject;
 
 import org.openqa.selenium.WebDriver;
 
-public class EmployeeAdvances {
+public class VehicleCompliances {
 	public WebDriver driver;
-	public EmployeeAdvances(WebDriver driver) {
+	public VehicleCompliances(WebDriver driver) {
 		this.driver=driver;
 	}
 }

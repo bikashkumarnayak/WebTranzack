@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11053" started-at="2020-06-15T11:06:55 IST" finished-at="2020-06-15T11:07:06 IST">
+  <suite name="Default suite" duration-ms="37014" started-at="2020-06-15T18:13:52 IST" finished-at="2020-06-15T18:14:29 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11053" started-at="2020-06-15T11:06:55 IST" finished-at="2020-06-15T11:07:06 IST">
-      <class name="com.abstech.tranzack.HomePage">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:com.abstech.tranzack.HomePage@3af9c5b7]" name="initialize" is-config="true" duration-ms="6472" started-at="2020-06-15T11:06:55 IST" finished-at="2020-06-15T11:07:01 IST">
+    <test name="Default test" duration-ms="37014" started-at="2020-06-15T18:13:52 IST" finished-at="2020-06-15T18:14:29 IST">
+      <class name="hr.Manage_PayrollPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:hr.Manage_PayrollPage@10aa41f2]" name="initialize" is-config="true" duration-ms="6904" started-at="2020-06-15T18:13:52 IST" finished-at="2020-06-15T18:13:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="homepageNav()[pri:0, instance:com.abstech.tranzack.HomePage@3af9c5b7]" name="homepageNav" duration-ms="3173" started-at="2020-06-15T11:07:01 IST" finished-at="2020-06-15T11:07:05 IST">
+        <test-method status="PASS" signature="login()[pri:0, instance:hr.Manage_PayrollPage@10aa41f2]" name="login" is-config="true" duration-ms="18362" started-at="2020-06-15T18:13:59 IST" finished-at="2020-06-15T18:14:17 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- homepageNav -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.abstech.tranzack.HomePage@3af9c5b7]" name="teardown" is-config="true" duration-ms="1358" started-at="2020-06-15T11:07:05 IST" finished-at="2020-06-15T11:07:06 IST">
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="hr_clkManagepayroll()[pri:0, instance:hr.Manage_PayrollPage@10aa41f2]" name="hr_clkManagepayroll" duration-ms="11710" started-at="2020-06-15T18:14:17 IST" finished-at="2020-06-15T18:14:29 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.abstech.tranzack.HomePage -->
+        </test-method> <!-- hr_clkManagepayroll -->
+      </class> <!-- hr.Manage_PayrollPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

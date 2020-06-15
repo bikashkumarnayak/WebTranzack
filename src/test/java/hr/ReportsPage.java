@@ -2,17 +2,22 @@ package hr;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.abstech.tranzack.HomePage;
 
-import PageObject.Dashboard;
+import PageObject.HRReports;
 import PageObject.LogInPage;
 import resource.Base;
 
-public class ReportsPage extends Base{
-	public Dashboard d;
-	public static Logger log=org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
+public class ReportsPage extends Base {
+	public HRReports hr;
+	SoftAssert assertion;
+	public static Logger log = org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
+
 	@BeforeTest
 	public void initialize() throws Exception {
 		driver = initializeDriver();
@@ -31,7 +36,7 @@ public class ReportsPage extends Base{
 		log.info("successfully enter");
 		lp.getcheck().click();
 		log.info("Successfully click");
-		WebElement loginButton=lp.getlogin();
+		WebElement loginButton = lp.getlogin();
 		lp.getborder(loginButton);
 		lp.getlogin().click();
 		log.info("login page login Successfully");
@@ -39,5 +44,23 @@ public class ReportsPage extends Base{
 
 	}
 
+	@Test
+	public void hr_reports() throws InterruptedException {
+		HRReports hr=new HRReports(driver);
+		hr.getHr();
+		Thread.sleep(5000);
+		hr.getclkHR_Reports();
+		SoftAssert assertion=new SoftAssert();
+		assertion.assertEquals(hr.getchecking_Reports(), "Reports");
+		assertion.assertAll();
+		System.out.println("assert passed");
+		hr.getframe();
+		
+	}
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+		driver = null;
+	}
 
 }
