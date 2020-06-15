@@ -1,4 +1,4 @@
-package com.abstech.tranzack;
+package hr;
 
 
 
@@ -9,6 +9,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import com.abstech.tranzack.HomePage;
 
 import PageObject.Attendance;
 import PageObject.Dashboard;

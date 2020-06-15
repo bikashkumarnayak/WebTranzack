@@ -1,7 +1,9 @@
-package com.abstech.tranzack;
+package hr;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import com.abstech.tranzack.HomePage;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;

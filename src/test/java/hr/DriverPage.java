@@ -1,13 +1,16 @@
-package com.abstech.tranzack;
+package hr;
 
 import java.util.List;
 
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import com.abstech.tranzack.HomePage;
 
 import PageObject.Dashboard;
 import PageObject.Driver;
@@ -119,8 +122,8 @@ public class DriverPage extends Base {
 			dr.getDOjyearClick().click();
 			log.info("Select Successfully year");
 		}
-		List<WebElement> Date = dr.getSelectDate();
-		int count = dr.getSelectDate().size();
+		List<WebElement> Date = dr.getDOBDate();
+		int count = dr.getDOBDate().size();
 		System.out.println(count);
 		for (WebElement ele : Date) {
 			String date = ele.getText();
@@ -134,7 +137,41 @@ public class DriverPage extends Base {
 		log.info("Select Successfully Date");
 		Thread.sleep(7000);
 	}
-
+	
+	
+	@Test(priority = 3)
+	public void addDriver_fifth_part() throws InterruptedException {
+		dr.getAuthority().sendKeys(prop.getProperty("Authority"));
+		dr.getBloodGroup().sendKeys(prop.getProperty("BloodGroup"));
+		dr.getIssueDate().click();
+		while (!dr.getissuemonth().getText().contains("APRIL")) {
+			dr.getIssueMonthClick().click();
+			log.info("Select Successfully month");
+		}
+		while (!dr.getissueyear().getText().contains("APRIL 2018")) {
+			dr.getIssueyearClick().click();
+			log.info("Select Successfully year");
+		}
+		List<WebElement> AllDate = dr.get_issue_Selec_tDate();
+		int count = dr.get_issue_Selec_tDate().size();
+		System.out.println(count);
+		for (WebElement ele : AllDate) {
+			String date = ele.getText();
+			if (date.equalsIgnoreCase("10")) {
+				ele.click();
+				break;	
+				
+			}			
+		}
+		dr.getokClick().click();
+		log.info("Select Successfully Date");
+		Thread.sleep(7000);
+	}
+	
+		
+		
+	
+	
 	@AfterTest
 	public void teardown() {
 		driver.quit();

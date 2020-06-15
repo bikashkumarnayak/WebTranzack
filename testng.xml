@@ -19,12 +19,27 @@
   </test>
   <test  name="Department">
     <classes>
-     <class name="com.abstech.tranzack.DepartmentPage"/>
+     <class name="hr.DepartmentPage"/>
       </classes>
   </test>
   <test  name="Attendance">
     <classes>
-     <class name="com.abstech.tranzack.AttendancePage"/>
+     <class name="hr.AttendancePage"/>
+      </classes>
+  </test>
+  <test  name="Driver">
+    <classes>
+     <class name="hr.DriverPage"/>
+      </classes>
+  </test>
+   <test  name="EmployeeAdvance">
+    <classes>
+     <class name="hr.EmployeeAdvancePage"/>
+      </classes>
+  </test>
+  <test  name="EmployeeAdvance">
+    <classes>
+     <class name="hr.EmployeeAdvancePage"/>
       </classes>
   </test>
   <test  name="Test">
