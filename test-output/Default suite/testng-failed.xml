@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.abstech.tranzack.DriverPage">
+      <class name="master.Do_ChallanPage">
         <methods>
-          <include name="initialize"/>
-          <include name="teardown"/>
-          <include name="addDriver_fifth_part"/>
           <include name="login"/>
+          <include name="initialize"/>
+          <include name="dochallan"/>
         </methods>
-      </class> <!-- com.abstech.tranzack.DriverPage -->
+      </class> <!-- master.Do_ChallanPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -10,14 +10,12 @@ import org.testng.asserts.SoftAssert;
 import com.abstech.tranzack.HomePage;
 
 import PageObject.BatteryMaster;
-import PageObject.Dashboard;
 import PageObject.LogInPage;
 import resource.Base;
 
 public class Battery_MasterPage extends Base {
-	public Dashboard d;
 	public BatteryMaster bm;
-	SoftAssert assertion;
+	public SoftAssert assertion;
 	public static Logger log = org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
 
 	@BeforeTest
@@ -61,6 +59,7 @@ public class Battery_MasterPage extends Base {
 		System.out.println("assertion pass");
 		bm.getframe();
 		log.info("Successfully enter frame");
+		Thread.sleep(5000);
 
 	}
 

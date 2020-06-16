@@ -2,16 +2,20 @@ package master;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.abstech.tranzack.HomePage;
 
-import PageObject.Dashboard;
+import PageObject.Customer;
 import PageObject.LogInPage;
 import resource.Base;
 
 public class CustomerPage extends Base {
-	public Dashboard d;
+	public Customer c;
+	SoftAssert assertion;
 	public static Logger log=org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
 	@BeforeTest
 	public void initialize() throws Exception {
@@ -37,6 +41,31 @@ public class CustomerPage extends Base {
 		log.info("login page login Successfully");
 		Thread.sleep(15000);
 
+	}
+	@Test
+	public void mastercustomer() throws InterruptedException {
+		c=new Customer(driver);
+		c.getclkMaster();
+		log.info("Successfully clicking master");
+		c.getclkCustomer();
+		log.info("sucessfully clicking customer");
+		Thread.sleep(5000);
+		String print=c.getcheckingCustomer();
+		System.out.println(print);
+		Thread.sleep(5000);
+		assertion = new SoftAssert();
+		assertion.assertEquals(print,"Customer");
+		assertion.assertAll();
+		System.out.println("Assertion passed");
+		c.getframe();
+		
+	}
+	
+	
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+		driver = null;
 	}
 
 

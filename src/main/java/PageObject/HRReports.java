@@ -9,7 +9,7 @@ public class HRReports {
 	public Actions a;
 	
 	private By Hr=By.xpath("//i[contains(text(),'supervisor_account')]");
-	private By Reports=By.xpath("//a[@class='nav-link opened']//span[@class='title'][contains(text(),'Reports')]");
+	private By Reports=By.xpath("//li[6]//ul[1]//li[8]//a[1]//span[1]");
 	private By checking_reports=By.xpath("//div[@id='modal_154']//header[contains(text(),'Reports')]");
 	private By frame=By.xpath("//div[@id='modalBody_154']//iframe[contains(@class,'ifream')]");
 	

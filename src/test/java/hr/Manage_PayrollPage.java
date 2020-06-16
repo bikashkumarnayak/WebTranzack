@@ -2,6 +2,7 @@ package hr;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -58,6 +59,13 @@ public class Manage_PayrollPage  extends Base {
 	  log.info("Success fully passed checking manage payroll");
 	  mp.getframe();
 	  log.info("successfully enter");
+	  Thread.sleep(5000);
  }
+ @AfterTest
+	public void teardown() {
+		driver.quit();
+		driver = null;
+ }
+
 
 }

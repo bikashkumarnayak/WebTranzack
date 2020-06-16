@@ -2,16 +2,20 @@ package hsd;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.abstech.tranzack.HomePage;
 
-import PageObject.Dashboard;
+import PageObject.DieselPurches;
 import PageObject.LogInPage;
 import resource.Base;
 
 public class Diesel_PurchasePage extends Base {
-	public Dashboard d;
+	public DieselPurches dp;
+	public SoftAssert assertion;
 	public static Logger log=org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
 	@BeforeTest
 	public void initialize() throws Exception {
@@ -37,6 +41,27 @@ public class Diesel_PurchasePage extends Base {
 		log.info("login page login Successfully");
 		Thread.sleep(15000);
 
+	}
+	@Test
+	public void hr_SalarySheet() throws InterruptedException {
+		dp=new DieselPurches(driver);
+		  assertion=new SoftAssert();
+		  dp.gethsd();
+		  log.info("clk successfully hr");
+		  dp.getclkDiselPurches();
+		  log.info("clk successfully Salary Sheet ");
+		  Thread.sleep(5000);
+		  assertion.assertEquals(dp.getcheckingDiselPurches(), "Diesel purchase");
+		  assertion.assertAll();
+		  System.out.println("assertion passed");
+		  Thread.sleep(5000);
+		  dp.getframe();
+		  Thread.sleep(7000);
+	}
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+		driver = null;
 	}
 
 

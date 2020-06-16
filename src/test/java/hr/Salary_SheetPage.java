@@ -2,16 +2,21 @@ package hr;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.abstech.tranzack.HomePage;
 
-import PageObject.Dashboard;
 import PageObject.LogInPage;
+import PageObject.SalarySheet;
 import resource.Base;
 
 public class Salary_SheetPage extends Base {
-	public Dashboard d;
+	public SalarySheet ss;
+	public SoftAssert assertion;
+	
 	public static Logger log=org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
 	@BeforeTest
 	public void initialize() throws Exception {
@@ -37,6 +42,27 @@ public class Salary_SheetPage extends Base {
 		log.info("login page login Successfully");
 		Thread.sleep(15000);
 
+	}
+	@Test
+	public void hr_SalarySheet() throws InterruptedException {
+		ss=new SalarySheet(driver);
+		  assertion=new SoftAssert();
+		  ss.getHR();
+		  log.info("clk successfully hr");
+		  ss.getclkSalarySheet();
+		  log.info("clk successfully Salary Sheet ");
+		  Thread.sleep(5000);
+		  assertion.assertEquals(ss.getcheckingSalarySheet(), "Salary sheet");
+		  assertion.assertAll();
+		  System.out.println("assertion passed");
+		  Thread.sleep(5000);
+		  ss.getframe();
+		  Thread.sleep(7000);
+	}
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+		driver = null;
 	}
 
 
