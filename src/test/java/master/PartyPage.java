@@ -2,16 +2,19 @@ package master;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.abstech.tranzack.HomePage;
-
-import PageObject.Dashboard;
 import PageObject.LogInPage;
+import PageObject.Party;
 import resource.Base;
 
 public class PartyPage extends Base {
-	public Dashboard d;
+	public Party p;
+	public SoftAssert assertion;
 	public static Logger log=org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
 	@BeforeTest
 	public void initialize() throws Exception {
@@ -38,6 +41,33 @@ public class PartyPage extends Base {
 		Thread.sleep(15000);
 
 	}
+	@Test
+	public void master_clkOarty() throws InterruptedException {
+		p = new Party(driver);
+		p.getMaster();
+		Thread.sleep(5000);
+		p.getclk_Party();
+		log.info("Successfully party sub module ");
+		Thread.sleep(5000);
+		String printparty=p.getparty_checking();
+		System.out.println("printGroup");
+		assertion = new SoftAssert();
+		assertion.assertEquals(printparty, "Party");
+		log.info("Successfully passed");
+		assertion.assertAll();
+		System.out.println("assertion pass");
+		p.getframe();
+		log.info("Successfully enter frame");
+		Thread.sleep(5000);
+
+	}
+
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+		driver = null;
+	}
+
 
 
 }

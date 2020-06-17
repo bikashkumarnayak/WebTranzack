@@ -2,28 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39765" started-at="2020-06-16T18:27:01 IST" finished-at="2020-06-16T18:27:41 IST">
+  <suite name="Default suite" duration-ms="41371" started-at="2020-06-17T15:48:55 IST" finished-at="2020-06-17T15:49:36 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39765" started-at="2020-06-16T18:27:01 IST" finished-at="2020-06-16T18:27:41 IST">
-      <class name="master.Freight_Payment_VoucherPage">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:master.Freight_Payment_VoucherPage@3af9c5b7]" name="initialize" is-config="true" duration-ms="6775" started-at="2020-06-16T18:27:01 IST" finished-at="2020-06-16T18:27:08 IST">
+    <test name="Default test" duration-ms="41371" started-at="2020-06-17T15:48:55 IST" finished-at="2020-06-17T15:49:36 IST">
+      <class name="reports.Driver_PerformancePage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:reports.Driver_PerformancePage@10aa41f2]" name="initialize" is-config="true" duration-ms="6643" started-at="2020-06-17T15:48:55 IST" finished-at="2020-06-17T15:49:01 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="login()[pri:0, instance:master.Freight_Payment_VoucherPage@3af9c5b7]" name="login" is-config="true" duration-ms="21722" started-at="2020-06-16T18:27:08 IST" finished-at="2020-06-16T18:27:30 IST">
+        <test-method status="PASS" signature="login()[pri:0, instance:reports.Driver_PerformancePage@10aa41f2]" name="login" is-config="true" duration-ms="19148" started-at="2020-06-17T15:49:01 IST" finished-at="2020-06-17T15:49:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="master_clkFreightPaymentVoucher()[pri:0, instance:master.Freight_Payment_VoucherPage@3af9c5b7]" name="master_clkFreightPaymentVoucher" duration-ms="10533" started-at="2020-06-16T18:27:30 IST" finished-at="2020-06-16T18:27:40 IST">
+        <test-method status="PASS" signature="master_clkGroups()[pri:0, instance:reports.Driver_PerformancePage@10aa41f2]" name="master_clkGroups" duration-ms="15533" started-at="2020-06-17T15:49:20 IST" finished-at="2020-06-17T15:49:36 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- master_clkFreightPaymentVoucher -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:master.Freight_Payment_VoucherPage@3af9c5b7]" name="teardown" is-config="true" duration-ms="692" started-at="2020-06-16T18:27:40 IST" finished-at="2020-06-16T18:27:41 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- master.Freight_Payment_VoucherPage -->
+        </test-method> <!-- master_clkGroups -->
+      </class> <!-- reports.Driver_PerformancePage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

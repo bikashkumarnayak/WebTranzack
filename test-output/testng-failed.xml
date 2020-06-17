@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="master.Do_ChallanPage">
+      <class name="master.Route_MasterPage">
         <methods>
+          <include name="master_clkRoutMaster"/>
           <include name="login"/>
           <include name="initialize"/>
-          <include name="dochallan"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- master.Do_ChallanPage -->
+      </class> <!-- master.Route_MasterPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

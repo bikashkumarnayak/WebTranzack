@@ -2,16 +2,21 @@ package master;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.abstech.tranzack.HomePage;
 
-import PageObject.Dashboard;
+
 import PageObject.LogInPage;
+import PageObject.Setting;
 import resource.Base;
 
 public class SettingsPage extends Base {
-	public Dashboard d;
+	public Setting s;
+	public SoftAssert assertion;
 	public static Logger log=org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
 	@BeforeTest
 	public void initialize() throws Exception {
@@ -38,6 +43,33 @@ public class SettingsPage extends Base {
 		Thread.sleep(15000);
 
 	}
+	@Test
+	public void master_clkGroups() throws InterruptedException {
+		s = new Setting(driver);
+		s.getMaster();
+		Thread.sleep(5000);
+		s.getclk_Setting();
+		log.info("Successfully click add tyre to vehicle sub module ");
+		Thread.sleep(5000);
+		String printSetting=s.getSetting_checking();
+		System.out.println(printSetting);
+		assertion = new SoftAssert();
+		assertion.assertEquals(printSetting, "Settings");
+		log.info("Successfully passed");
+		assertion.assertAll();
+		System.out.println("assertion pass");
+		s.getframe();
+		log.info("Successfully enter frame");
+		Thread.sleep(5000);
+
+	}
+
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+		driver = null;
+	}
+
 
 
 }

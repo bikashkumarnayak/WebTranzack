@@ -2,17 +2,22 @@ package master;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.abstech.tranzack.HomePage;
 
-import PageObject.Dashboard;
+import PageObject.Geofences;
 import PageObject.LogInPage;
 import resource.Base;
 
 public class GeofencesPage extends Base {
-	public Dashboard d;
-	public static Logger log=org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
+	public Geofences gf;
+	public SoftAssert assertion;
+	public static Logger log = org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
+
 	@BeforeTest
 	public void initialize() throws Exception {
 		driver = initializeDriver();
@@ -31,7 +36,7 @@ public class GeofencesPage extends Base {
 		log.info("successfully enter");
 		lp.getcheck().click();
 		log.info("Successfully click");
-		WebElement loginButton=lp.getlogin();
+		WebElement loginButton = lp.getlogin();
 		lp.getborder(loginButton);
 		lp.getlogin().click();
 		log.info("login page login Successfully");
@@ -39,5 +44,31 @@ public class GeofencesPage extends Base {
 
 	}
 
+	@Test
+	public void master_clkGeofences() throws InterruptedException {
+		gf = new Geofences(driver);
+		gf.getMaster();
+		Thread.sleep(5000);
+		gf.getclk_Geofences();
+		log.info("Successfully click Geofences sub module ");
+		Thread.sleep(5000);
+		String printGeofences = gf.getGeofences_checking();
+		System.out.println(printGeofences);
+		assertion = new SoftAssert();
+		assertion.assertEquals(printGeofences, "Geofences");
+		log.info("Successfully passed");
+		assertion.assertAll();
+		System.out.println("assertion pass");
+		gf.getframe();
+		log.info("Successfully enter frame");
+		Thread.sleep(5000);
+
+	}
+
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+		driver = null;
+	}
 
 }
