@@ -2,15 +2,15 @@ package reports;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.abstech.tranzack.HomePage;
 
-import PageObject.Dashboard;
+
 import PageObject.DriverPerformance;
-import PageObject.Group;
 import PageObject.LogInPage;
 import resource.Base;
 
@@ -62,6 +62,11 @@ public class Driver_PerformancePage extends Base {
 		log.info("Successfully enter frame");
 		Thread.sleep(5000);
 
+	}
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+		driver = null;
 	}
 
 }

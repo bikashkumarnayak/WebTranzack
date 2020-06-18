@@ -2,16 +2,19 @@ package reports;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.abstech.tranzack.HomePage;
-
-import PageObject.Dashboard;
+import PageObject.EventReports;
 import PageObject.LogInPage;
 import resource.Base;
 
 public class Event_ReportsPage extends Base {
-	public Dashboard d;
+	public EventReports er;
+	SoftAssert assertion;
 	public static Logger log=org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
 	@BeforeTest
 	public void initialize() throws Exception {
@@ -38,5 +41,32 @@ public class Event_ReportsPage extends Base {
 		Thread.sleep(15000);
 
 	}
+	@Test
+	public void clk_Reports_EventReports() throws InterruptedException {
+		er=new EventReports(driver);
+		er.getReports();
+		log.info("Click Successfully Reports");
+		er.getclk_EventReports();
+		log.info("Clk Successfully Event Reports");
+		Thread.sleep(5000);
+		String printEvent_Reports=er.getEventReports_checking();
+		System.out.println(printEvent_Reports);
+		assertion=new SoftAssert();
+		assertion.assertEquals(printEvent_Reports, "Event reports");
+		System.out.println("assertion passed");
+		log.info("Successfully check eventreports page");
+	    Thread.sleep(5000);
+	    er.getframe();
+	    Thread.sleep(5000);
+	    log.info("successfully enter frame in eventreports page");
+	    
+		
+	}
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+		driver = null;
+	}
+	
 
 }

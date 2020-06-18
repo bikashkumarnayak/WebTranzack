@@ -2,16 +2,19 @@ package reports;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.abstech.tranzack.HomePage;
-
-import PageObject.Dashboard;
+import PageObject.GpsTrips;
 import PageObject.LogInPage;
 import resource.Base;
 
 public class Gps_TripsPage extends Base {
-	public Dashboard d;
+	public GpsTrips gt;
+	SoftAssert assertion;
 	public static Logger log=org.apache.logging.log4j.LogManager.getLogger(HomePage.class.getName());
 	@BeforeTest
 	public void initialize() throws Exception {
@@ -38,4 +41,30 @@ public class Gps_TripsPage extends Base {
 		Thread.sleep(15000);
 
 	}
+	@Test
+	public void clk_Gps_TripReports() throws InterruptedException {
+		gt=new GpsTrips(driver);
+		gt.getReports();
+		log.info("Successfully enter report module");
+		gt.getGps_Reports();
+		log.info("successfully enter gpsTripReports");
+		String printGpsReports=gt.getCheck_EventReports();
+		System.out.println(printGpsReports);
+		assertion=new SoftAssert();
+		assertion.assertEquals(printGpsReports, "Gps trips");
+		System.out.println("assertion passed ");
+		log.info("check successfully gps trip reports");
+		Thread.sleep(5000);
+		gt.getframe();
+	    log.info("Successfully enter frame in the gps trip reports");
+		Thread.sleep(5000);
+		
+		
+	}
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+		driver = null;
+	}
+	
 }

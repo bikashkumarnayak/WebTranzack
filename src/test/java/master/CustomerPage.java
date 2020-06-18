@@ -53,11 +53,15 @@ public class CustomerPage extends Base {
 		String print=c.getcheckingCustomer();
 		System.out.println(print);
 		Thread.sleep(5000);
+		log.info("Successfully print for customer page");
 		assertion = new SoftAssert();
 		assertion.assertEquals(print,"Customer");
 		assertion.assertAll();
+		System.out.println("Successfully review customer page");
 		System.out.println("Assertion passed");
 		c.getframe();
+		log.info("Successfully enter frame");
+		Thread.sleep(7000);
 		
 	}
 	

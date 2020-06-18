@@ -2,24 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41371" started-at="2020-06-17T15:48:55 IST" finished-at="2020-06-17T15:49:36 IST">
+  <suite name="Default suite" duration-ms="40329" started-at="2020-06-18T16:52:38 IST" finished-at="2020-06-18T16:53:18 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41371" started-at="2020-06-17T15:48:55 IST" finished-at="2020-06-17T15:49:36 IST">
-      <class name="reports.Driver_PerformancePage">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:reports.Driver_PerformancePage@10aa41f2]" name="initialize" is-config="true" duration-ms="6643" started-at="2020-06-17T15:48:55 IST" finished-at="2020-06-17T15:49:01 IST">
+    <test name="Default test" duration-ms="40329" started-at="2020-06-18T16:52:38 IST" finished-at="2020-06-18T16:53:18 IST">
+      <class name="reports.Historic_PlaybackPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:reports.Historic_PlaybackPage@3af9c5b7]" name="initialize" is-config="true" duration-ms="6692" started-at="2020-06-18T16:52:38 IST" finished-at="2020-06-18T16:52:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="login()[pri:0, instance:reports.Driver_PerformancePage@10aa41f2]" name="login" is-config="true" duration-ms="19148" started-at="2020-06-17T15:49:01 IST" finished-at="2020-06-17T15:49:20 IST">
+        <test-method status="PASS" signature="login()[pri:0, instance:reports.Historic_PlaybackPage@3af9c5b7]" name="login" is-config="true" duration-ms="17321" started-at="2020-06-18T16:52:44 IST" finished-at="2020-06-18T16:53:02 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="master_clkGroups()[pri:0, instance:reports.Driver_PerformancePage@10aa41f2]" name="master_clkGroups" duration-ms="15533" started-at="2020-06-17T15:49:20 IST" finished-at="2020-06-17T15:49:36 IST">
+        <test-method status="PASS" signature="getclkHistoric_Payback()[pri:0, instance:reports.Historic_PlaybackPage@3af9c5b7]" name="getclkHistoric_Payback" duration-ms="15561" started-at="2020-06-18T16:53:02 IST" finished-at="2020-06-18T16:53:17 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- master_clkGroups -->
-      </class> <!-- reports.Driver_PerformancePage -->
+        </test-method> <!-- getclkHistoric_Payback -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:reports.Historic_PlaybackPage@3af9c5b7]" name="teardown" is-config="true" duration-ms="710" started-at="2020-06-18T16:53:17 IST" finished-at="2020-06-18T16:53:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- reports.Historic_PlaybackPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
